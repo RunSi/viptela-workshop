@@ -7,14 +7,14 @@ all:
   children:
     routers:
       hosts:
-        internet:
-        hq:
-        core:
-        sp1:
+        iosv-1:
+        iosv-2:
+        iosv-3:
     clients:
       hosts:
-        host1:
-        host2:
+        host_site3:
+        host_site4:
+        host_site5:
     viptela:
       vars:
         netconf_template_os: viptela
@@ -23,15 +23,22 @@ all:
           children:
             vmanage_hosts:
               hosts:
-                vmanage1:
+                vManage_1:
             vbond_hosts:
               hosts:
-                vbond1:
+                vBond:
             vsmart_hosts:
               hosts:
-                vsmart1:
+                vSmart_100:
+                vSmart_101:        
         viptela_vedge:
           hosts:
-            vedge-hq:
-            vedge1:
-            vedge2:
+            vEdge_1:
+            vEdge_2:
+            vEdge_3:
+            vEdge_4:
+            vEdge_5:
+            vEdge_6:
+            vEdge_7:
+            vEdge_8:
+

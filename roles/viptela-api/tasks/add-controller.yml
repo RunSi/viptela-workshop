@@ -3,7 +3,7 @@
 
 - name: See if the controller exists
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/system/device/controllers"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/system/device/controllers"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -21,7 +21,7 @@
 
 - name: Add controller
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/system/device"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/system/device"
     method: POST
     headers:
       Cookie: "{{ viptela_api_cookie }}"

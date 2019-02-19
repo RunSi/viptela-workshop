@@ -10,7 +10,7 @@
 
 - name: Check Cookie
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/clientSessionTimeout"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/clientSessionTimeout"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -24,7 +24,7 @@
 
 - name: Get Cookie
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/j_security_check"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/j_security_check"
     method: POST
     body:
       j_username: "{{ viptela_api_username }}"

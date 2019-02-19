@@ -3,16 +3,16 @@ vpn_instances:
     interfaces:
       - if_name: ge0/0
         ip:
-          address: 172.20.0.14/30
+          address: 10.65.31.1/16
         tunnel_interface:
         shutdown: false
     routes:
       - prefix: 0.0.0.0/0
         next_hop:
-          address: 172.20.0.13
+          address: 10.65.100.1
   - vpn_id: 1
     interfaces:
-      - if_name: ge0/1
+      - if_name: ge0/2
         ip:
-          address: 192.168.2.1/24
+          address: 10.3.3.1/24
         shutdown: false

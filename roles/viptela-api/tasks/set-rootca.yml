@@ -3,7 +3,7 @@
 
 # - name: See if the vBond is already set
 #   uri:
-#     url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/device"
+#     url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/device"
 #     method: GET
 #     headers:
 #       Cookie: "{{ viptela_api_cookie }}"
@@ -19,7 +19,7 @@
 
 - name: Get CA Type
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/certificate"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/certificate"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -32,7 +32,7 @@
 
 - name: Set CA Type
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/certificate"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/certificate"
     method: POST
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -49,7 +49,7 @@
 
 - name: Get CA Cert
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/certificate/rootcertificate"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/certificate/rootcertificate"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -62,7 +62,7 @@
 
 - name: Set CA Cert
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/certificate/enterpriserootca"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/certificate/enterpriserootca"
     method: PUT
     headers:
       Cookie: "{{ viptela_api_cookie }}"

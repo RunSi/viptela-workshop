@@ -3,7 +3,7 @@ vpn_instances:
     interfaces:
       - if_name: eth1
         ip:
-          address: 10.0.0.12/24
+          address: 10.64.100.80/16
         tunnel_interface: true
         allow_service:
         - all
@@ -11,4 +11,4 @@ vpn_instances:
     routes:
       - prefix: 0.0.0.0/0
         next_hop:
-          address: 10.0.0.1
+          address: 10.64.100.1

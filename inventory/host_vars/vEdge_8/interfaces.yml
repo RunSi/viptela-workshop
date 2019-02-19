@@ -1,0 +1,18 @@
+vpn_instances:
+  - vpn_id: 0
+    interfaces:
+      - if_name: ge0/0
+        ip:
+          address: 10.64.51.1/16
+        tunnel_interface:
+        shutdown: false
+    routes:
+      - prefix: 0.0.0.0/0
+        next_hop:
+          address: 10.64.100.1
+  - vpn_id: 1
+    interfaces:
+      - if_name: ge0/1
+        ip:
+          address: 10.5.5.4/24
+        shutdown: false

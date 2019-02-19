@@ -3,7 +3,7 @@
 
 - name: Get available serial numbers
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/system/device/vedges?model=vedge-cloud"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/system/device/vedges?model=vedge-cloud"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -42,7 +42,7 @@
 
   - name: Get bootstrap information
     uri:
-      url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/system/device/bootstrap/device/{{ vedge_uuid_list[0] }}?configtype=cloudinit"
+      url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/system/device/bootstrap/device/{{ vedge_uuid_list[0] }}?configtype=cloudinit"
       method: GET
       headers:
         Cookie: "{{ viptela_api_cookie }}"

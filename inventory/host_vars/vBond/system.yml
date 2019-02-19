@@ -1,0 +1,6 @@
+system_ip: 10.100.0.45
+transport_ip: 10.64.100.45
+site_id: 1
+vbond:
+  remote: 10.64.100.45
+  local: true

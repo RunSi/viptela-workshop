@@ -3,7 +3,7 @@
 
 - name: See if the vBond is already set
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/device"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/device"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -18,7 +18,7 @@
 
 - name: Set vBond
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/device"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/device"
     method: PUT
     headers:
       Cookie: "{{ viptela_api_cookie }}"

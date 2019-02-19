@@ -3,7 +3,7 @@
 
 - name: Install Certificate
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/certificate/install/signedCert"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/certificate/install/signedCert"
     method: POST
     headers:
       Cookie: "{{ viptela_api_cookie }}"

@@ -3,7 +3,7 @@
 
 - name: Get current Organization
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/organization"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/organization"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -17,7 +17,7 @@
 
 - name: Set Organization
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/settings/configuration/organization"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/settings/configuration/organization"
     method: PUT
     headers:
       Cookie: "{{ viptela_api_cookie }}"

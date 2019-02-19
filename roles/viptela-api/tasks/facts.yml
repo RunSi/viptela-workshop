@@ -6,7 +6,7 @@
 - block:
     - name: Get Tenant Status
       uri:
-        url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/system/device"
+        url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/system/device"
         method: GET
         headers:
           Cookie: "{{ viptela_api_cookie }}"

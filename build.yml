@@ -1,7 +1,7 @@
 - hosts: localhost
   gather_facts: no
   vars:
-    topo_file: viptela1.virl
+    topo_file: lonlab-sdwan.virl
     topo_name: "{{ topo_file.split('.')[0] }}"
     topo_id: "{{ lookup('password', '/dev/null length=4 chars=ascii_letters') }}"
   tasks:

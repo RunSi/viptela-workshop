@@ -9,7 +9,7 @@
 
 - name: Get our deviceIP by hostname
   uri:
-    url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/system/device/controllers"
+    url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/system/device/controllers"
     method: GET
     headers:
       Cookie: "{{ viptela_api_cookie }}"
@@ -29,7 +29,7 @@
 - block:
   - name: Get CSR
     uri:
-      url: "https://{{ hostvars['vmanage1'].ansible_host }}/dataservice/certificate/generate/csr"
+      url: "https://{{ hostvars['vManage_1'].ansible_host }}/dataservice/certificate/generate/csr"
       method: POST
       headers:
         Cookie: "{{ viptela_api_cookie }}"
